@@ -1,0 +1,209 @@
+#root {
+  margin: 0 auto;
+  padding: 0;
+}
+
+#hero{
+  background: url(/BG.svg);
+  background-size: cover;
+  height: 800px;
+  padding: 5px;
+
+}
+
+.menu-button{
+  display: none;
+}
+
+header{
+  width: 80%;
+  height:50px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 21px auto 0;
+}
+
+.navigation{
+  display: flex;
+  flex-basis: 90%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav{
+  display: flex;
+  flex-basis: 40%;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 1.2cqw;
+  font-family: 'Inter',sans-serif;
+  color: #12141D;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerButtonsContainer{
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.headerButtonsContainer button{
+  all: unset;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 1.2cqw;
+  text-align: center;
+  font-family: 'Inter',sans-serif;
+  border-radius:5px ;
+  cursor: pointer;
+  border-top: 2px solid rgba(85, 84, 84, 0.224);
+} 
+
+.headerButtonsContainer button:last-child{
+  background-color: #14B082;
+  color:#FFFFFF ;
+  margin-left: 10px;
+  transition: background-color 0.5s ease-in-out;
+
+}
+
+.heroContent{
+  width: 70%;
+  display: flex;
+  margin: 60px auto 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heroImageContent{
+  position: relative;
+  flex-basis: 45%;
+}
+
+.heroImageContent img{
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.heroTextContent{
+ flex-basis: 48%;
+}
+
+.heroHeading{
+  font-family: 'Prosto One', sans-serif;
+  font-weight: 400; 
+  font-size: 4.5cqw;
+  letter-spacing: 0px;
+  margin-bottom: 30px;
+
+}
+
+.heroParagraph{
+  font-family: 'Inter',sans-serif;
+  opacity: 70%;
+  letter-spacing: -0.5px;
+  font-size:1.2cqw ;
+  margin-bottom: 30px;
+}
+
+.heroButtons{
+  all: unset;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 1.2cqw;
+  text-align: center;
+  font-family: 'Inter',sans-serif;
+  border-radius:5px ;
+  cursor: pointer;
+  color:#FFFFFF ;
+}
+
+.arrowIcon{
+  vertical-align: middle;
+  margin-left: 5px;
+  width: 35px;
+}
+
+.dotImage{
+  position: absolute;
+  top:72%
+}
+
+.review{
+  position: absolute;
+  top: 66%;
+  left: 47%;
+  width: 45%;
+  border-radius: 10px;
+  padding: 0 15px 15px;
+  background-color: #FFFFFF;
+  opacity: 90%;
+}
+
+.number{
+  font-family: 'Prosto One',sans-serif;
+  font-weight: 400;
+  font-size:4cqw ;
+  margin-bottom: 10px;
+ 
+}
+
+.reviewText{
+  font-size: 1.4cqw;
+  font-family: 'Inter',sans-serif;
+  font-weight: 500;
+  
+}
+
+#features{
+  width: 80%;
+  margin: auto;
+  padding: 60px 0;
+}
+
+#features h2{
+  width: 45%;
+  margin: auto;
+  text-align: center;
+  font-family: 'Prosto One', sans-serif;
+  font-size: 2.3cqw;
+}
+
+.featuresContainer{
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+
+.feature{
+  flex-basis: 32%;
+  border: 1px solid rgba(0, 0, 0, 0.215);
+  border-radius: 10px;
+  padding: 30px;
+
+}
+
+.featureImgContainer{
+  width: 63px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.215);
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.feature h3{
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.3cqw;
+  margin-bottom: 20px;
+}
+
+.feature p{
+  font-family: 'Inter', sans-serif;
+  font-size: 1.01cqw;
+  opacity: 70%;
+}
