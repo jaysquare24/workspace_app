@@ -1,6 +1,7 @@
 import React from 'react'
 import { Hero } from './components/hero'
 import { Main } from './components/main/Main'
+import { Footer } from './components/Footer'
 
 import './App.css'
 
@@ -10,8 +11,7 @@ function App() {
     <>
     <Hero/>
     <Main/>
-    
-      
+    <Footer/>
     </>
   )
 }

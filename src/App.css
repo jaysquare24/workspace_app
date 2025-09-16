@@ -57,7 +57,7 @@ nav{
   font-family: 'Inter',sans-serif;
   border-radius:5px ;
   cursor: pointer;
-  border-top: 2px solid rgba(85, 84, 84, 0.224);
+  border: 1px solid rgba(85, 84, 84, 0.224);
 } 
 
 .headerButtonsContainer button:last-child{
@@ -111,7 +111,7 @@ nav{
 
 .buttons{
   all: unset;
-  padding: 10px 20px;
+  padding: 7px 20px;
   font-weight: 600;
   font-size: 1.2cqw;
   text-align: center;
@@ -475,3 +475,65 @@ input:focus {
   opacity: 70%;
 }
 
+
+.topNav{
+  width: 80%;
+  margin: 60px auto 0;
+}
+
+.topNav .logo{
+  margin-bottom: 20px;
+}
+
+.topNav p{
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2cqw;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.topNav li{
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+footer a, .bottomSection p{
+  text-decoration: none;
+  color: #52525B;
+  font-family: 'Inter', sans-serif;
+  font-size: 1cqw;
+  font-weight: 500;
+}
+
+.bottomSection{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+ 
+}
+
+.bottomNav{
+  display: flex;
+  flex-basis: 50%;
+  align-items: center;
+  margin: 30px 0 30px;
+}
+
+.socials{
+  flex-basis: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials img{
+  vertical-align: middle;
+}
+
+.repeatedLinks{
+  flex-basis: 57%;
+  display: flex;
+  justify-content: space-between;
+}
