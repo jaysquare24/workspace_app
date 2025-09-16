@@ -68,7 +68,7 @@ nav{
 
 }
 
-.heroContent{
+.content{
   width: 70%;
   display: flex;
   margin: 60px auto 0;
@@ -76,31 +76,32 @@ nav{
   justify-content: space-between;
 }
 
-.heroImageContent{
+.imageContent{
   position: relative;
   flex-basis: 45%;
 }
 
-.heroImageContent img{
+.imageContent img{
   width: 100%;
   height: 100%;
   vertical-align: middle;
 }
 
-.heroTextContent{
+.textContent{
  flex-basis: 48%;
 }
 
-.heroHeading{
+.heading, .subHeading, .experienceContainer h2, form h2{
   font-family: 'Prosto One', sans-serif;
   font-weight: 400; 
   font-size: 4.5cqw;
+  line-height: 65px;
   letter-spacing: 0px;
   margin-bottom: 30px;
 
 }
 
-.heroParagraph{
+.paragraph, .experienceParagraph, form p{
   font-family: 'Inter',sans-serif;
   opacity: 70%;
   letter-spacing: -0.5px;
@@ -108,7 +109,7 @@ nav{
   margin-bottom: 30px;
 }
 
-.heroButtons{
+.buttons{
   all: unset;
   padding: 10px 20px;
   font-weight: 600;
@@ -118,6 +119,9 @@ nav{
   border-radius:5px ;
   cursor: pointer;
   color:#FFFFFF ;
+  background-color: #14B082;
+  display: inline-block;   
+  box-sizing: border-box;
 }
 
 .arrowIcon{
@@ -133,13 +137,13 @@ nav{
 
 .review{
   position: absolute;
-  top: 66%;
-  left: 47%;
-  width: 45%;
+  top: 67%;
+  left: 52%;
+  width: 40%;
   border-radius: 10px;
   padding: 0 15px 15px;
   background-color: #FFFFFF;
-  opacity: 90%;
+  opacity: 92%;
 }
 
 .number{
@@ -151,7 +155,7 @@ nav{
 }
 
 .reviewText{
-  font-size: 1.4cqw;
+  font-size: 1.3cqw;
   font-family: 'Inter',sans-serif;
   font-weight: 500;
   
@@ -207,3 +211,267 @@ nav{
   font-size: 1.01cqw;
   opacity: 70%;
 }
+
+
+#productivity{
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;      
+  object-fit: cover; 
+  object-position: bottom;
+  z-index: -1;       /* sit behind other content */
+}
+
+#productivity .content{
+  width: 80%;
+  margin-top: 0;
+}
+
+#productivity .textContent{
+  order: -1;
+  flex-basis: 35%;
+}
+
+#productivity .imageContent{
+  display: flex;
+  flex-basis: 45%;
+
+}
+
+#productivity .imageContent img{
+  width: 85%;
+  margin-left: auto;
+}
+
+.subHeading{
+  font-size: 2.8cqw;
+  line-height: 40px;
+}
+
+#productivity .paragraph{
+  font-size: 1.15cqw;
+}
+
+#productivity .review{
+ left: 0;
+ top: 48%;
+}
+
+#workspace{
+  background-color: #243C35;
+  padding: 60px 0;
+  position: relative;
+  
+}
+
+#workspace h2{
+  width: 35%;
+  margin: auto;
+  font-family: 'Prosto One', sans-serif;
+  font-size: 2.3cqw;
+  text-align: center;
+  line-height: 38px;
+  color: #FAFAFA;
+  
+}
+
+#workspace .topText{
+  width: 25%;
+  margin: 10px auto 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1cqw;
+  text-align: center;
+  color: #FAFAFA;
+  opacity: 80%;
+ 
+  
+}
+
+
+.spaceContainer{
+  width: 80%;
+  margin: 45px auto 0;
+  justify-content: space-between;
+  display: flex;
+}
+
+.space{
+  flex-basis: 32%;
+}
+
+.spaceImg{
+  width: 100%;
+}
+
+.caption{
+  font-family: 'Inter', sans-serif;
+  font-size: 1.35cqw;
+  font-weight: 700;
+  color: #FAFAFA;
+}
+
+.dotImg{
+  position: absolute;
+  right: 0.5%;
+  top: 15%;
+}
+
+#customersRating{
+  padding: 60px 0;
+}
+
+#customersRating .content{
+  width: 80%;
+}
+
+#customersRating .imageContent{
+  position: relative;
+  flex-basis: 55%;
+}
+
+#customersRating .mainImg{
+  width: 84%;
+}
+
+#customersRating .subImgContainer{
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+  border: 2px solid #FAFAFA;
+  border-radius: 50%;
+  
+}
+
+#customersRating .textContent{
+  flex-basis: 38%;
+}
+
+.rating{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.ratingNum{
+  font-family: 'Prosto One', sans-serif;
+  font-size: 3cqw;
+  color: #FFC947;
+}
+
+.ratingText{
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2cqw;
+}
+
+#message{
+  background-color: #edfdf8;
+  padding: 60px 0;
+}
+
+.messageContainer{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+.experienceContainer{
+  flex-basis: 40%;
+}
+
+.experienceContainer h2, form h2{
+  font-size: 2.8cqw;
+  line-height: 40px;
+}
+
+.experienceParagraph{
+  padding-right: 60px;
+  
+}
+
+form{
+  flex-basis: 40%;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  position: relative;
+  
+}
+
+form h2, form p{
+  text-align: center;
+}
+
+form .buttons{
+  width: 100%;
+  margin: 30px 0 13px;
+}
+
+.label:not(:first-of-type){
+  display: block;
+  margin-top: 20px;
+}
+
+input{
+  width: 100%;
+  padding: 10px 5px;
+}
+
+.suggestionsList{
+  position: absolute;
+  background-color: #FFFFFF;
+  opacity: 1;
+  z-index: 2;
+  list-style: none;
+  margin: 5px 20px 0 0;
+  border: 1px solid #bdfbe9;
+  font-size: 1cqw;
+  font-family: 'Inter', sans-serif;
+  
+}
+
+.suggestionItem{
+  padding: 5px;
+  cursor: pointer;
+}
+
+
+
+
+input:focus {
+  border-color:  #bdfbe9;
+  border-radius: 5px;
+  outline: none; /* optional: remove default blue outline */
+}
+
+.person{
+  display: flex;
+  align-items: center;
+}
+
+.personImg{
+  margin-right: 5%;
+  vertical-align: middle;
+}
+
+.name, .position, .label, ::placeholder{
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1cqw;
+}
+
+.position, ::placeholder{
+  font-weight: 400;
+  opacity: 70%;
+}
+
