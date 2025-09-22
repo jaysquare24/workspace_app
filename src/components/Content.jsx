@@ -13,6 +13,10 @@ export const Content = ({
     trustpilotRating,
     ratingText }) => {
 
+    const handleClick = () => {
+        alert('Feature not added in this demo.');
+    }
+
     return(
         <div className="content">
             <div className="imageContent">
@@ -20,7 +24,7 @@ export const Content = ({
                 { numOfReview &&
                     <div className="review">
                         <p className="number">{numOfReview}</p>
-                        <p className="reviewText">{reviewText}</p>
+                        <p className="reviewText" >{reviewText}</p>
                     </div>
                 }
                 {subImgSrc &&
@@ -33,7 +37,7 @@ export const Content = ({
                 {heading && <h1 className="heading">{heading} </h1>}
                 {subHeading && <h2 className="subHeading">{subHeading}</h2>}
                 <p className="paragraph">{paragraph}</p>
-                {buttonText && <button className="buttons" id="getInTouchButton" type="button">{buttonText}<img className="arrowIcon" src={iconsrc}/></button>}  
+                {buttonText && <button className="buttons" id="getInTouchButton" onClick={handleClick} type="button">{buttonText}<img className="arrowIcon" src={iconsrc}/></button>}  
                 
                 { activeCustomer &&
                     <div className="rating">

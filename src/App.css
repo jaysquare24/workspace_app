@@ -4,11 +4,11 @@
 }
 
 #hero{
+  position: relative;
   background: url(/BG.svg);
   background-size: cover;
-  height: 800px;
-  padding: 5px;
-
+  background-position: bottom;
+  padding: 5px 5px 100px;
 }
 
 .menu-button{
@@ -30,16 +30,29 @@ header{
   justify-content: space-between;
   align-items: center;
 }
+
 nav{
   display: flex;
   flex-basis: 40%;
   justify-content: space-between;
   font-weight: 500;
-  font-size: 1.2cqw;
+  font-size: 14px;
   font-family: 'Inter',sans-serif;
   color: #12141D;
   align-items: center;
   gap: 10px;
+}
+
+.headerNavs a{
+  border-top: 2px solid rgba(85, 84, 84, 0.224);
+  padding:  7px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out ;
+}
+
+.headerNavs a:hover,.headerButtonsContainer button:hover{
+  background-color: rgba(85, 84, 84, 0.224);
 }
 
 .headerButtonsContainer{
@@ -52,7 +65,7 @@ nav{
   all: unset;
   padding: 10px 20px;
   font-weight: 500;
-  font-size: 1.2cqw;
+  font-size: 15px;
   text-align: center;
   font-family: 'Inter',sans-serif;
   border-radius:5px ;
@@ -65,7 +78,11 @@ nav{
   color:#FFFFFF ;
   margin-left: 10px;
   transition: background-color 0.5s ease-in-out;
+}
 
+.headerButtonsContainer button:last-child:hover{
+    background-color: #FFFFFF;
+    color: #14B082;
 }
 
 .content{
@@ -95,17 +112,16 @@ nav{
   font-family: 'Prosto One', sans-serif;
   font-weight: 400; 
   font-size: 4.5cqw;
-  line-height: 65px;
+  line-height: 5cqw;
   letter-spacing: 0px;
   margin-bottom: 30px;
-
 }
 
 .paragraph, .experienceParagraph, form p{
   font-family: 'Inter',sans-serif;
   opacity: 70%;
   letter-spacing: -0.5px;
-  font-size:1.2cqw ;
+  font-size:16px ;
   margin-bottom: 30px;
 }
 
@@ -113,7 +129,7 @@ nav{
   all: unset;
   padding: 7px 20px;
   font-weight: 600;
-  font-size: 1.2cqw;
+  font-size: 15px;
   text-align: center;
   font-family: 'Inter',sans-serif;
   border-radius:5px ;
@@ -122,6 +138,13 @@ nav{
   background-color: #14B082;
   display: inline-block;   
   box-sizing: border-box;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+}
+
+.buttons:hover{
+  transform: scale( 1.03);
+  box-shadow: -4px 4px #68dab8 ;
 }
 
 .arrowIcon{
@@ -132,7 +155,7 @@ nav{
 
 .dotImage{
   position: absolute;
-  top:72%
+  top:55%
 }
 
 .review{
@@ -151,14 +174,12 @@ nav{
   font-weight: 400;
   font-size:4cqw ;
   margin-bottom: 10px;
- 
 }
 
 .reviewText{
-  font-size: 1.3cqw;
+  font-size: 1.2cqw;
   font-family: 'Inter',sans-serif;
   font-weight: 500;
-  
 }
 
 #features{
@@ -168,11 +189,12 @@ nav{
 }
 
 #features h2{
-  width: 45%;
+  width: 55%;
   margin: auto;
   text-align: center;
   font-family: 'Prosto One', sans-serif;
-  font-size: 2.3cqw;
+  font-size: 2.8cqw;
+  line-height:3.5cqw;
 }
 
 .featuresContainer{
@@ -186,7 +208,6 @@ nav{
   border: 1px solid rgba(0, 0, 0, 0.215);
   border-radius: 10px;
   padding: 30px;
-
 }
 
 .featureImgContainer{
@@ -202,16 +223,15 @@ nav{
 .feature h3{
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  font-size: 1.3cqw;
+  font-size: 17px;
   margin-bottom: 20px;
 }
 
 .feature p{
   font-family: 'Inter', sans-serif;
-  font-size: 1.01cqw;
+  font-size: 12.8px;
   opacity: 70%;
 }
-
 
 #productivity{
   padding: 60px 0;
@@ -230,6 +250,10 @@ nav{
   z-index: -1;       /* sit behind other content */
 }
 
+.background_2{
+  display: none;
+}
+
 #productivity .content{
   width: 80%;
   margin-top: 0;
@@ -243,7 +267,6 @@ nav{
 #productivity .imageContent{
   display: flex;
   flex-basis: 45%;
-
 }
 
 #productivity .imageContent img{
@@ -253,16 +276,20 @@ nav{
 
 .subHeading{
   font-size: 2.8cqw;
-  line-height: 40px;
+  line-height: 3.5cqw;
 }
 
-#productivity .paragraph{
-  font-size: 1.15cqw;
+#productivity .paragraph, #workspace .paragraph{
+  font-size: 15px;
 }
 
 #productivity .review{
  left: 0;
  top: 48%;
+}
+
+#productivity .reviewText{
+  font-size: 1.3cqw;
 }
 
 #workspace{
@@ -273,28 +300,24 @@ nav{
 }
 
 #workspace h2{
-  width: 35%;
+  width: 40%;
   margin: auto;
   font-family: 'Prosto One', sans-serif;
-  font-size: 2.3cqw;
+  font-size: 2.8cqw;
   text-align: center;
-  line-height: 38px;
+  line-height: 3.5cqw;
   color: #FAFAFA;
-  
 }
 
 #workspace .topText{
   width: 25%;
   margin: 10px auto 0;
   font-family: 'Inter', sans-serif;
-  font-size: 1.1cqw;
+  font-size: 14px;
   text-align: center;
   color: #FAFAFA;
-  opacity: 80%;
- 
-  
+  opacity: 80%; 
 }
-
 
 .spaceContainer{
   width: 80%;
@@ -347,7 +370,6 @@ nav{
   bottom: 10%;
   border: 2px solid #FAFAFA;
   border-radius: 50%;
-  
 }
 
 #customersRating .textContent{
@@ -368,7 +390,7 @@ nav{
 
 .ratingText{
   font-family: 'Inter', sans-serif;
-  font-size: 1.2cqw;
+  font-size: 16px;
 }
 
 #message{
@@ -382,7 +404,6 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
- 
 }
 
 .experienceContainer{
@@ -391,12 +412,11 @@ nav{
 
 .experienceContainer h2, form h2{
   font-size: 2.8cqw;
-  line-height: 40px;
+  line-height: 3.5cqw;
 }
 
 .experienceParagraph{
   padding-right: 60px;
-  
 }
 
 form{
@@ -405,7 +425,6 @@ form{
   background-color: #FFFFFF;
   border-radius: 10px;
   position: relative;
-  
 }
 
 form h2, form p{
@@ -437,7 +456,6 @@ input{
   border: 1px solid #bdfbe9;
   font-size: 1cqw;
   font-family: 'Inter', sans-serif;
-  
 }
 
 .suggestionItem{
@@ -445,13 +463,10 @@ input{
   cursor: pointer;
 }
 
-
-
-
 input:focus {
   border-color:  #bdfbe9;
   border-radius: 5px;
-  outline: none; /* optional: remove default blue outline */
+  outline: none; 
 }
 
 .person{
@@ -467,7 +482,7 @@ input:focus {
 .name, .position, .label, ::placeholder{
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 1cqw;
+  font-size: 13px;
 }
 
 .position, ::placeholder{
@@ -475,10 +490,13 @@ input:focus {
   opacity: 70%;
 }
 
+footer{
+  padding: 60px 0 30px;
+}
 
 .topNav{
   width: 80%;
-  margin: 60px auto 0;
+  margin: auto;
 }
 
 .topNav .logo{
@@ -487,9 +505,10 @@ input:focus {
 
 .topNav p{
   font-family: 'Inter', sans-serif;
-  font-size: 1.2cqw;
+  font-size: 14px;
   font-weight: 600;
   margin-bottom: 20px;
+
 }
 
 .topNav li{
@@ -501,7 +520,7 @@ footer a, .bottomSection p{
   text-decoration: none;
   color: #52525B;
   font-family: 'Inter', sans-serif;
-  font-size: 1cqw;
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -511,19 +530,23 @@ footer a, .bottomSection p{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
- 
+}
+
+.bottomSection a, .bottomSection p{
+  font-size: 12px;
 }
 
 .bottomNav{
   display: flex;
-  flex-basis: 50%;
+  flex-basis: 70%;
   align-items: center;
   margin: 30px 0 30px;
+  justify-content: start;
+  gap: 10%;
 }
 
 .socials{
-  flex-basis: 30%;
+  flex-basis: 20%;
   display: flex;
   justify-content: space-between;
 }
@@ -533,7 +556,474 @@ footer a, .bottomSection p{
 }
 
 .repeatedLinks{
-  flex-basis: 57%;
+  flex-basis: 60%;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 8%;
+}
+
+@media screen and (max-width:1100px){
+  .feature h3{
+    font-size: 14px;
+  }
+
+  .ratingText{
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width:950px){
+  header{
+    width: 90%;
+    justify-content: space-between;
+  }
+  
+  .menu-button{
+    display: block;
+    background: none;
+    border: none;
+  }
+
+  #menu-icon{
+    width: 25px;
+  }
+
+  .navigation{
+    display: none;
+  }
+
+  .navigation.active{
+    display: block;
+    position: absolute;
+    background: #FFFFFF;
+    top: 75px;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 2;
+    
+  }
+
+  .headerNavs{
+    flex-direction: column;
+    font-size: 14px;
+    height: auto;
+    gap: 10px;
+  }
+
+  .headerNavs a{
+    border-top: 2px solid #D7FFF3;
+    padding:  7px 10px;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    border-radius: 5px;
+  }
+
+  .headerNavs a:hover{
+   background-color: rgba(85, 84, 84, 0.224);
+  }
+
+
+  .headerButtonsContainer{
+    flex-direction: column;
+    margin:50px auto 0;
+    width: 90%;
+    height: auto;  
+  }
+
+  .headerButtonsContainer button{
+    font-size: 16px;
+    border: 2px solid #D7FFF3;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px; 
+  }
+
+  .headerButtonsContainer button:last-child{
+    border: 2px solid black;
+    margin-left: 0px;
+  }
+
+  #hero .reviewText{
+    font-size: 1.1cqw;
+  }
+
+  .dotImage, .dotImg{
+    width: 50px;
+  }
+
+  .feature h3{
+    font-size: 1.4cqw;
+  }
+
+  .ratingText{
+    font-size: 1.5cqw;
+  }
+
+  .bottomSection a, .bottomSection p{
+   font-size: 1.2cqw;
+  }
+}
+
+@media screen and (max-width:773px){
+  #hero .content{
+    width: 80%;
+  }
+
+  #hero .reviewText{
+    font-size: 1.19cqw;
+  }
+
+  #features,
+  #productivity .content,
+  .spaceContainer,
+  #customersRating .content,
+  .messageContainer,
+  .topNav,
+  .bottomNav{
+    width: 90%;
+  }
+   
+  .feature{
+    padding: 15px;
+  }
+
+  .feature h3, .ratingText{
+    font-size:  1.7cqw;
+  }
+
+  .caption{
+    font-size: 1.8cqw;
+  }
+  
+  form{
+    flex-basis: 50%;
+  }
+
+  .topNav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .topNav ul{
+    width: 250px;
+  }
+
+  .bottomSection{
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .bottomSection a, .bottomSection p{
+    font-size: 12px;
+  }
+
+  .bottomNav{
+    margin-bottom:20px;
+    width: 100%;
+  }
+}
+
+
+@media  screen and (max-width: 630px) {
+  #hero{
+    background: #D7FFF3;
+    padding: 5px 5px 30px;
+  }
+  .content{
+    flex-direction: column;
+  }
+
+  .imageContent{
+    margin-top: 20px;
+  }
+
+  .textContent{
+    order: -1;
+  }
+
+  .heading{
+    font-size: 7.5cqw;
+    line-height: 9cqw;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+  .subHeading, .experienceContainer h2, form h2{
+    font-size: 6cqw;
+    line-height: 7.5cqw;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+
+  .paragraph, .experienceParagraph, form p{
+    text-align: center;
+    font-size:3cqw;
+    letter-spacing: 0;
+  }
+
+  .buttons{
+    display: block;   
+    margin: auto;
+  }
+
+  .dotImage{  
+    top:14%
+  }
+
+  .review{
+    padding: 12px 15px 18px ;
+  }
+
+  .number{
+    font-size: 8cqw;
+  }
+
+  #hero .reviewText, #productivity .reviewText{
+   font-size: 3cqw;
+  }
+
+  .dotImage, .dotImg{
+    width: 32px;
+  }
+
+  #features h2{
+    width: 100%;
+    font-size: 6.5cqw;
+    line-height:8cqw;
+  }
+
+  .featuresContainer{
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .featureImgContainer{
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  .feature h3{
+    font-size: 3.5cqw;
+    text-align: center;
+  }
+
+  .feature p{
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .background{
+    display: none;
+  }
+
+  .background_2{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;      
+    object-fit: cover; 
+    object-position: bottom;
+    z-index: -1;  
+  }
+
+  #productivity .content{
+    gap: 30px;
+  }
+
+  #productivity .textContent{
+    order: 1;
+    width: 80%;
+  }
+
+  #productivity h2{
+    font-size: 6.5cqw;
+    line-height: 8cqw;
+  }
+
+  #workspace h2{
+    width: 90%;
+    font-size: 6.5cqw;
+    line-height: 8cqw; 
+  }
+
+  #workspace .topText{
+    width: 90%;
+    margin-top: 20px;
+    font-size: 3cqw;
+  }
+
+  .spaceContainer{
+    gap: 40px;
+    flex-direction: column;
+  }
+
+  .caption{
+    width: 80%;
+    font-size: 3.5cqw;
+  }
+
+  .dotImg{
+    display: none;
+  }
+
+  #customersRating{
+    padding: 30px 0;
+  }
+
+  #customersRating .content{
+    margin-top: 0;
+    gap:30px
+  }
+
+  #customersRating .imageContent{
+    order: -1;
+  }
+
+  #customersRating h2, #customersRating p{
+    text-align: left;
+  }
+
+  #customersRating .textContent{
+    flex-basis: 38%;
+  }
+
+  .rating{
+    margin-top: 20px;
+    justify-content: flex-start;
+    gap: 50px;
+  }
+
+  .ratingNum{
+    font-size: 5.5cqw;
+  }
+
+  .ratingText{
+    font-size: 3cqw;
+  }
+
+  .messageContainer{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .experienceContainer h2{
+    text-align: left;
+  }
+
+  .experienceParagraph{
+    padding-right: 0px;
+    text-align: left;
+  }
+
+  .suggestionsList{
+    font-size: 3.5cqw;
+  }
+
+  .name, .position, .label, ::placeholder{
+    font-size: 2.5cqw;
+  }
+
+  .topNav{
+    width: 90%;
+    gap: 40px
+  }
+
+  .topNav ul{
+    width: 180px;
+  }
+
+  .bottomSection{
+    width: 95%;
+  }
+
+  .bottomNav{
+    display: block;
+  }
+
+  .socials{
+    gap: 30px;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .bottomSection p{
+    margin-right: auto;
+  }
+}
+
+@media  screen and (max-width:430px){
+
+  #hero .content, #features,
+  #productivity .content, .spaceContainer,
+  #customersRating .content, .messageContainer{
+    width: 95%;
+  
+  }
+
+  .heading{
+    font-size: 9.5cqw;
+    line-height: 12cqw;  
+  }
+
+  .number{
+    font-size: 9.5cqw;
+  }
+
+  #hero .reviewText, #productivity .reviewText{
+   font-size: 3.5cqw;
+  }
+
+  .subHeading, .experienceContainer h2, form h2{
+    font-size: 8cqw;
+    line-height: 10cqw;  
+  }
+
+  .paragraph, .experienceParagraph, form p{
+    font-size:4.25cqw;
+  }
+
+  #features h2, #productivity h2, #workspace h2{
+    font-size: 8cqw;
+    line-height:10cqw;
+  }
+
+  .feature h3{
+    font-size: 5cqw;
+  }
+
+  .feature p{
+    font-size: 17px;
+  }
+
+  #workspace .topText{
+    font-size: 4.2cqw;
+  }
+  
+  .caption{
+    font-size: 4.8cqw;
+  }
+
+  .ratingNum{
+    font-size: 7cqw;
+  }
+
+  .ratingText{
+    font-size: 4cqw;
+  }
+
+  .name, .position, .label, ::placeholder{
+    font-size: 3.5cqw;
+  }
+
+  .topNav{
+    width: 95%;
+  }
+
+  .topNav ul{
+    width: 150px;
+  }
 }

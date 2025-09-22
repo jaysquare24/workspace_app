@@ -1,12 +1,12 @@
 import { Feature } from "./Feature"
 import { Content } from "../Content"
-import { LocationInputWithAutoComplete } from "./LocationInputWithAutoComplete"
+import { Form } from "./Form"
 
 export const Main = () => {
     
   return (
     <main> 
-        <section id="features">
+        <section id="features" className="mainSection">
             <h2>The modern conveniences of this co-working place</h2>
             <div className="featuresContainer">
                 <Feature 
@@ -27,9 +27,10 @@ export const Main = () => {
 
             </div>    
         </section>
-        <section id="productivity">
+        <section id="productivity" className="mainSection">
             {/*Productivity Content Component*/}
             <img className="background" src="/P_BG.svg" alt="background image"/>
+            <img className="background_2" src="/P_BG2.svg" alt="background image"/>
             <Content
                 imgsrc="/pimage.svg"
                 numOfReview="27%"
@@ -40,7 +41,7 @@ export const Main = () => {
                 iconsrc="/arrowIcon.svg"
             />
         </section>
-        <section id="workspace">
+        <section id="workspace" className="mainSection">
             <h2>This is an excellent place for your team to work</h2>
             <p className="topText">High productivity at the workplace is a sign of a healthy business and work culture.</p>
             <div className="spaceContainer">
@@ -59,7 +60,7 @@ export const Main = () => {
             </div>
             <img className="dotImg" src="/W_dots.svg" alt="styling image"/>
         </section>
-        <section id="customersRating">
+        <section id="customersRating" className="mainSection">
             {/*Customers Rating Content Component*/}
             <Content
                 imgsrc="/R_image.svg"
@@ -72,7 +73,7 @@ export const Main = () => {
                 ratingText="Ratings on Trustpilot"
             />
         </section>
-        <section id="message">
+        <section id="message" className="mainSection">
             <div className="messageContainer">
                 <div className="experienceContainer">
                     <h2>People talk about their experiences in our workplace</h2>
@@ -85,22 +86,8 @@ export const Main = () => {
                         </div>
                     </div>
                 </div>
-
-                <form className="messageForm" method="POST" action="#">
-                    <h2>Get 3 Days Free Seat Right Now</h2>
-                    <p className="formParagraph">A modern workplace in london</p>
-
-                    <label className="label" htmlFor="location">Location</label> 
-                    <LocationInputWithAutoComplete />
-
-                    <label className="label" htmlFor="name">Your Name</label> 
-                    <input className="inputField" name="name" type="text" placeholder="Enter full name" required/> 
-
-                    <label className="label" htmlFor="email">Email Address</label> 
-                    <input className="inputField" name="email" type="email" placeholder="Enter email address" required/>
-
-                    <button className="buttons" id="sendMessageButton" type="submit">Get 3 Days Free Seat<img className="arrowIcon" src="/arrowIcon.svg"/></button>
-                </form>
+                {/*Message Form Component*/}
+                <Form/>
             </div>
         </section>
 
