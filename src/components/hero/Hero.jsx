@@ -26,7 +26,7 @@ export const Hero = () => {
             {/*Hero Content Component*/}
             <div className="heroContentWrapper">
             <Content
-                imgsrc="/image.svg"
+                imgsrc="/image.png"
                 numOfReview="2k+"
                 reviewText="Professionals love our spaces"
                 heading={<>Find a <br/> <div className="adjectiveWrapper"><span key={adjective} className="highlightedAdjective">{adjective}</span></div><br/>workplace</>}

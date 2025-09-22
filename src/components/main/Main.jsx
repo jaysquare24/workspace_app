@@ -32,7 +32,7 @@ export const Main = () => {
             <img className="background" src="/P_BG.svg" alt="background image"/>
             <img className="background_2" src="/P_BG2.svg" alt="background image"/>
             <Content
-                imgsrc="/pimage.svg"
+                imgsrc="/pimage.png"
                 numOfReview="27%"
                 reviewText="Productivity increase on average"
                 subHeading="Find everything to increase your productivity"
@@ -46,15 +46,15 @@ export const Main = () => {
             <p className="topText">High productivity at the workplace is a sign of a healthy business and work culture.</p>
             <div className="spaceContainer">
                 <div className="space">
-                    <img className="spaceImg" src="/W1_image.svg" alt="workspace illustration"/>
+                    <img className="spaceImg" src="/W1_image.png" alt="workspace illustration"/>
                     <p className="caption">Spaces are designed for your work & to increase productivity</p>
                 </div>
                 <div className="space">
-                    <img className="spaceImg" src="/W2_image.svg" alt="workspace illustration"/>
+                    <img className="spaceImg" src="/W2_image.png" alt="workspace illustration"/>
                     <p className="caption">Enjoy your work and easily manage teams from around</p>
                 </div>
                 <div className="space">
-                    <img className="spaceImg" src="/W3_image.svg" alt="workspace illustration"/>
+                    <img className="spaceImg" src="/W3_image.png" alt="workspace illustration"/>
                     <p className="caption">Creative work place and environment that suits you</p>
                 </div>
             </div>
@@ -63,8 +63,8 @@ export const Main = () => {
         <section id="customersRating" className="mainSection">
             {/*Customers Rating Content Component*/}
             <Content
-                imgsrc="/R_image.svg"
-                subImgSrc="/Sub_r_image.svg"
+                imgsrc="/R_image.png"
+                subImgSrc="/Sub_r_image.png"
                 subHeading="The platform is designed to raise your experience"
                 paragraph="Workplace productivity relates to the amount of work that your staff can produce over a certain period. A productive workplace  more engaged employees and improved performance metrics."
                 activeCustomer="1.5M"
