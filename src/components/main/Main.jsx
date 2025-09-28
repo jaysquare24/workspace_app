@@ -1,13 +1,20 @@
 import { Feature } from "./Feature"
 import { Content } from "../Content"
 import { Form } from "./Form"
+import{ motion } from "framer-motion"
 
 export const Main = () => {
     
   return (
     <main> 
         <section id="features" className="mainSection">
-            <h2>The modern conveniences of this co-working place</h2>
+            <motion.h2
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: -0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ amount:0.3}}
+            >
+                The modern conveniences of this co-working place</motion.h2>
             <div className="featuresContainer">
                 <Feature 
                     imgSrc="/wifi_1.svg"
@@ -42,8 +49,15 @@ export const Main = () => {
             />
         </section>
         <section id="workspace" className="mainSection">
-            <h2>This is an excellent place for your team to work</h2>
-            <p className="topText">High productivity at the workplace is a sign of a healthy business and work culture.</p>
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: -0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ amount:0.3}}
+            >
+                <h2>This is an excellent place for your team to work</h2>
+                <p className="topText">High productivity at the workplace is a sign of a healthy business and work culture.</p>
+            </motion.div>
             <div className="spaceContainer">
                 <div className="space">
                     <img className="spaceImg" src="/W1_image.png" alt="workspace illustration"/>
@@ -76,15 +90,29 @@ export const Main = () => {
         <section id="message" className="mainSection">
             <div className="messageContainer">
                 <div className="experienceContainer">
-                    <h2>People talk about their experiences in our workplace</h2>
-                    <p className="experienceParagraph">“I really enjoy my work and it makes me more productive, happier and more successful. The coworking place builds confidence and inspires greater performance and greater success for both employees and employers.”</p>
-                    <div className="person">
-                        <img className="personImg" src="/Ellipse.svg" alt="person illustration"/>
-                        <div className="personText">
-                            <p className="name">Jenny Wilson</p>
-                            <p className="position">Project Manager at Microsoft</p>
+                    <motion.h2
+                        initial={{ opacity: 0, x: -100 }}
+                        whileInView={{ opacity: 1, x: -0 }}
+                        transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+                        viewport={{ amount:0.3}}
+                    > 
+                       People talk about their experiences in our workplace
+                    </motion.h2>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, ease: "easeInOut", delay: 0.7 }}
+                        viewport={{ amount:0.2}}
+                    >
+                        <p className="experienceParagraph">“I really enjoy my work and it makes me more productive, happier and more successful. The coworking place builds confidence and inspires greater performance and greater success for both employees and employers.”</p>
+                        <div className="person">
+                            <img className="personImg" src="/Ellipse.svg" alt="person illustration"/>
+                            <div className="personText">
+                                <p className="name">Jenny Wilson</p>
+                                <p className="position">Project Manager at Microsoft</p>
+                            </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
                 {/*Message Form Component*/}
                 <Form/>

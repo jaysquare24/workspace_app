@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export const Content = ({
     imgsrc,
     numOfReview,
@@ -35,22 +37,35 @@ export const Content = ({
             </div>
             <div className="textContent">
                 {heading && <h1 className="heading">{heading} </h1>}
-                {subHeading && <h2 className="subHeading">{subHeading}</h2>}
-                <p className="paragraph">{paragraph}</p>
-                {buttonText && <button className="buttons" id="getInTouchButton" onClick={handleClick} type="button">{buttonText}<img className="arrowIcon" src={iconsrc}/></button>}  
-                
-                { activeCustomer &&
-                    <div className="rating">
-                        <div className="customer">
-                            <p className="ratingNum">{activeCustomer}</p>
-                            <p className="ratingText">{customerText}</p>
+                {subHeading && <motion.h2 
+                                initial={{ opacity: 0, x: -100 }}
+                                whileInView={{ opacity: 1, x: -0 }}
+                                transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+                                viewport={{ amount:0.3}}
+                                className="subHeading"
+                >{subHeading}</motion.h2>}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, ease: "easeInOut", delay: 0.7 }}
+                    viewport={{ amount:0.2}}
+                >
+                    <p className="paragraph">{paragraph}</p>
+                    {buttonText && <button className="buttons" id="getInTouchButton" onClick={handleClick} type="button">{buttonText}<img className="arrowIcon" src={iconsrc}/></button>}  
+                    
+                    { activeCustomer &&
+                        <div className="rating">
+                            <div className="customer">
+                                <p className="ratingNum">{activeCustomer}</p>
+                                <p className="ratingText">{customerText}</p>
+                            </div>
+                            <div className="trustpilot">
+                                <p className="ratingNum">{trustpilotRating}</p>
+                                <p className="ratingText">{ratingText}</p>
+                            </div>
                         </div>
-                        <div className="trustpilot">
-                            <p className="ratingNum">{trustpilotRating}</p>
-                            <p className="ratingText">{ratingText}</p>
-                        </div>
-                    </div>
-                }
+                    }
+                </motion.div>
             </div>
         </div>
     )
