@@ -12,10 +12,7 @@ export const Header = () => {
 
   return (
     <header>
-      <h1>
-        <img className="logo" src="/Logo.svg" alt="logo"/>
-        JetPay
-      </h1>
+      <img className="logo" src="/Logo.svg" alt="logo"/>
       <div className={`navigation ${isMenuOpen ? 'active' : ''}`}>
         <nav className="headerNavs">
           <a>Home</a>
