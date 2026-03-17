@@ -305,7 +305,7 @@ nav{
   height: 100%;      
   object-fit: cover; 
   object-position: bottom;
-  z-index: -1;       /* sit behind other content */
+  z-index: -1;      
 }
 
 .background_2{
